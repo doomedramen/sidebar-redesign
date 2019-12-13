@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* UTILS */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.is-flex-column{
   flex-direction: column;
+}
+
+/* FONT */
+.is-bold{
+  font-weight: bold;
+}
+
+.has-text-black{
+  color:#1E1E1E;
+}
+
+
+/* SIDEBAR */
+.sidebar{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:300px;
+  color:#75787B;
+  background-color:#F3F3F3;
+  border-right: 1px solid #DCDBDC;
+  box-shadow: inset -2px 0px 2px -2px #DCDBDC;
+}
+
+.sidebar .container {
+  padding: 16px;
+}
+
+.sidebar .divider {
+  border-bottom: 1px solid #DCDBDC;
+  margin: 16px 0;
+}
+
+.sidebar input.search-box {
+  border-radius: 8px;
+  background-color: #FFF;
+  outline: none;
+  padding: 4px 35px;
+  border: none;
+  box-shadow: 0px 1px 1px 0px #DCDBDC;
+
+  max-width: 100%;
+  width: 100%;
+
+  font-size: 1rem;
+  height: 2em;
+
+  margin-bottom: 20px;
+
+  /* line-height: 1.5; */
+}
+
+/* ACCORDION */
+/* .accordion{
+
+} */
+.accordion .accordion__parent, .accordion .accordion__child{
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.accordion__parent:not(:last-child),
+.accordion__child:not(:last-child){
+  margin-bottom: 8px;
+}
+
+.accordion .accordion__parent.is-active {
+  background-color: #005AD8;
+  color:white;
+  font-weight: 500;
+}
+
+.accordion .accordion__child{
+  margin-left: 32px;
+}
+
+.accordion .accordion__child.is-active{
+  background-color: #DCDBDC;
+  color:#1E1E1E;
+  font-weight: 500;
+  /* font-weight: bold; */
+}
+
+/* LEVEL */
+.level {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.level:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.level-item {
+  align-items: center;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.level-left {
+  display: flex;
+}
+.level-left {
+  align-items: center;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.level-left, .level-right {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.level-right {
+  display: flex;
+}
+.level-right {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* CONTROL */
+.control {
+  box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.control .is-left, .control .is-right{
+  height: 2em;
+  position: absolute;
+  top:0;
+  /* line-height: 2rem; */
+  padding: 8px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  color: #75787B;
+}
+
+.control .is-left {
+  left: 0;
+}
+
+.control .is-right {
+  right: 0;
+}
+
+/* TAG */
+
+.tag{
+  border-radius: 4px;
+  background-color: #DCDBDC;
+  color: #656565;
+  font-size: .8rem;
+  padding: 2px 6px;
+  display: inline-block;
+}
+
+.tag:not(:last-child){
+  margin-right: 8px;
+}
+
+.tag.is-rounded {
+  border-radius: 99999px;
+}
+
+.tag.is-red{
+  background-color: #FF0000;
+  color: #FFF
+}
+
+.icon{
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.icon.is-black{
+  background-color: #1E1E1E;
+  color:white;
+}
+
+.icon.is-green{
+  background-color: #00B39D;
+  color:white;
+}
+
+.icon.is-red{
+  background-color: #FC2230;
+  color:white;
+}
+
+.icon.is-purple{
+  background-color: #9253D6;
+  color:white;
+}
+
+.icon.is-padded{
+  padding: 16px;
+}
+
+/* margins */
+
+.ml-1{
+  margin-left: .5rem;
+}
+.ml-2{
+  margin-left: 1rem;
+}
+
+/* ICON HAX */
+
+.fas, .far, .fa, .fal, .fad, .fab{
+  min-width: 16px;
+  text-align: center;
 }
