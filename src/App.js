@@ -43,11 +43,11 @@ function App() {
           </div>
 
 
-          <div>
+          <div className="ml-1 mr-1">
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
-                  <div className="ml-1"><i className="fas fa-bolt"></i></div>
+                  <i className="fas fa-bolt" />
                 </div>
                 <div className="level-item">
                   <div className="ml-2">Activity</div>
@@ -65,7 +65,7 @@ function App() {
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
-                  <div className="ml-1"><i className="fas fa-list"></i></div>
+                  <i className="fas fa-list" />
                 </div>
                 <div className="level-item">
                   <div className="ml-2">Overview</div>
@@ -81,7 +81,7 @@ function App() {
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
-                  <div className="ml-1"><i className="far fa-user"></i></div>
+                  <i className="far fa-user" />
                 </div>
                 <div className="level-item">
                   <div className="ml-2">Contacts</div>
@@ -97,7 +97,7 @@ function App() {
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
-                  <div className="ml-1"><i className="far fa-check-square"></i></div>
+                  <i className="far fa-check-square" />
                 </div>
                 <div className="level-item">
                   <div className="ml-2">Tasks</div>
