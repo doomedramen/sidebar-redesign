@@ -76,11 +76,16 @@ html {
 .accordion .accordion__parent, .accordion .accordion__child{
   padding: 4px;
   border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .accordion__parent:not(:last-child),
-.accordion__child:not(:last-child){
+.accordion__child{
   margin-bottom: 8px;
+}
+.accordion__child:first-child{
+  margin-top: 8px;
 }
 
 .accordion .accordion__parent.is-active {
@@ -89,16 +94,18 @@ html {
   font-weight: 500;
 }
 
-.accordion .accordion__child{
-  margin-left: 32px;
-}
-
 .accordion .accordion__child.is-active{
   background-color: #DCDBDC;
   color:#1E1E1E;
   font-weight: 500;
   /* font-weight: bold; */
 }
+
+.accordion .accordion__child{
+  margin-left: 32px;
+}
+
+
 
 /* LEVEL */
 .level {
@@ -182,6 +189,7 @@ html {
   font-size: .8rem;
   padding: 2px 6px;
   display: inline-block;
+  font-weight: 500;
 }
 
 .tag:not(:last-child){
@@ -234,6 +242,10 @@ html {
 }
 .ml-2{
   margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: .5rem;
 }
 
 /* ICON HAX */
